@@ -1,0 +1,7 @@
+{ns beda-emr-core
+ import #{zen.fhir}
+ profiles {:zen/tags #{zen.fhir/profiles}
+           :schemas
+           {"Questionnaire"
+            {"https://beda.software/beda-emr-questionnaire"
+             #zen/quote beda-emr-core.questionnaire/schema}}}}
