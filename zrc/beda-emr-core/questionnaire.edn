@@ -61,8 +61,8 @@
                                              :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue"}
                            :calculatedExpression {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-calculatedExpression/schema},
                                                   :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"}
-                           :cqfExpression {:confirms #{hl7-fhir-r4-core.cqf-expression/schema},
-                                           :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/cqf-expression"},
+                           :_text {:type zen/map :keys {:cqfExpression {:confirms #{hl7-fhir-r4-core.cqf-expression/schema}
+                                                                        :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/cqf-expression"}}}
                            :itemPopulationContext {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-itemPopulationContext/schema}
                                                    :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext"
                                                    :fhir/flags #{:MS}}
