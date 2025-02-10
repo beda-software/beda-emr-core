@@ -1,0 +1,9 @@
+Alias: $custom-medication-list = http://beda.software/custom-medication-list
+
+Instance: medication-1
+InstanceOf: FHIREMRMedication
+Usage: #example
+* batch.lotNumber = "001"
+* batch.expirationDate = "2024-08-05"
+* code = $custom-medication-list#edarbi-20mg-25tablets "Edarbi 20mg 25 tablets"
+* status = #active
