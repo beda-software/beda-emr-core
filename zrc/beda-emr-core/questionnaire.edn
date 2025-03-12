@@ -42,6 +42,8 @@
                                               :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/variable"}},
                            :subQuestionnaire {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-subQuestionnaire/schema},
                                               :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"}
+                           :readonlyExtensions {:confirms #{hl7-fhir-r4-core.CodeableConcept/schema},
+                                                :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/readonlyExtensions"}
                            :answerExpression {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-answerExpression/schema},
                                               :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression",
                                               :fhir/flags #{:MS}},
