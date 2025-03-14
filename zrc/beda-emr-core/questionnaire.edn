@@ -57,6 +57,8 @@
                            :itemControl {:confirms #{hl7-fhir-r4-core.questionnaire-itemControl/schema},
                                          :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
                                          :fhir/flags #{:MS}},
+                           :readOnlyItemControl {:confirms #{hl7-fhir-r4-core.questionnaire-itemControl/schema},
+                                                 :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/readOnlyItemControl"}
                            :sliderStepValue {:confirms #{hl7-fhir-r4-core.questionnaire-sliderStepValue/schema},
                                              :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue"}
                            :calculatedExpression {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-calculatedExpression/schema},
