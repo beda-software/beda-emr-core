@@ -13,8 +13,8 @@ jobs:
       run: |
         echo "Updating Publisher"
         /home/publisher/bin/ig-publisher-scripts/_updatePublisher.sh -f -y
-    - name: Run AutoIG Publisher build
-      run: java -jar input-cache/publisher.jar -ig ig.ini
+    - name: Run IG Publisher
+      run: ./_genonce.sh
     - name: Archive production artifacts
       uses: actions/upload-artifact@v4
       with:
