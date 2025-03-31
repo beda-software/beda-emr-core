@@ -10,9 +10,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
     - name: Update Publisher
-      run: |
-        echo "Updating Publisher"
-        /home/publisher/bin/ig-publisher-scripts/_updatePublisher.sh -f -y
+      run: ./_updatePublisher.sh -f -y
     - name: Run IG Publisher
       run: ./_genonce.sh
     - name: Archive production artifacts
