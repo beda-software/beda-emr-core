@@ -11,6 +11,8 @@ jobs:
       uses: actions/checkout@v4
     - name: Update Publisher
       run: ./_updatePublisher.sh -f -y
+    - name: Install sushi
+      run: npm install -g sushi
     - name: Run IG Publisher
       run: ./_genonce.sh
     - name: Archive production artifacts
