@@ -1,0 +1,36 @@
+name: Publish
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: hl7fhir/ig-publisher-base    # use ig publisher base image https://hub.docker.com/r/hl7fhir/ig-publisher-base
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Update Publisher
+      run: |
+        echo "Updating Publisher"
+        ./_updatePublisher.sh -f -y
+    - name: Run AutoIG Publisher build
+      run: java -jar input-cache/publisher.jar -ig ig.ini
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v4
+      with:
+         name: ig
+         path: ./ig/output
+  release:
+    if: contains(github.ref, 'tags/v')
+    needs: build
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: ig.zip
+        path: ./ig
+    - name: Upload archive
+      uses: softprops/action-gh-release@v2
+      with:
+          files: ig/package.tgz
+
