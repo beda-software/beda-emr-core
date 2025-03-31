@@ -12,7 +12,7 @@ jobs:
     - name: Update Publisher
       run: |
         echo "Updating Publisher"
-        ./_updatePublisher.sh -f -y
+        /home/publisher/bin/ig-publisher-scripts/_updatePublisher.sh -f -y
     - name: Run AutoIG Publisher build
       run: java -jar input-cache/publisher.jar -ig ig.ini
     - name: Archive production artifacts
