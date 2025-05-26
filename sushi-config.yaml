@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: fhir.emr
-canonical: https://emr.beda.software
+canonical: https://emr-core.beda.software
 name: EMRIG
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
