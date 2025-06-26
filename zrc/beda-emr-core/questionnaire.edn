@@ -100,7 +100,9 @@
                            :inlineChoiceDirection {:confirms #{hl7-fhir-r4-core.string/schema}
                                                    :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/inline-choice-direction"}
                            :rowsNumber {:confirms #{hl7-fhir-r4-core.integer/schema},
-                                        :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/rows-number"}}}
+                                        :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/rows-number"}
+                           :colsNumber {:confirms #{hl7-fhir-r4-core.integer/schema},
+                                        :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/cols-number"}}}
 
  schema
  {:zen/tags #{zen.fhir/profile-schema zen/schema}
