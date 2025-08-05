@@ -36,3 +36,10 @@ Description: "An example profile of the Questionnaire resource."
 * item.extension contains Macro named macro 0..1
 * item.extension contains InlineChoiceDirection named inlineChoiceDirection 0..1
 * item.extension contains RowsNumber named rowsNumber 0..1
+
+* item ^slicing.discriminator.type = #value
+* item ^slicing.discriminator.path = "type"
+* item ^slicing.rules = #open
+* item contains attachmentItem 0..*
+* item[attachmentItem].type = #attachment
+* item[attachmentItem].extension contains http://hl7.org/fhir/StructureDefinition/mimeType named mimeType 0..1
