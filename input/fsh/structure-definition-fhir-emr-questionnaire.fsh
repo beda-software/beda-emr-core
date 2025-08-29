@@ -26,6 +26,9 @@ Description: "An example profile of the Questionnaire resource."
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression named enableWhenExpression 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-hidden named hidden 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/mimeType named mimeType 0..*
+* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression named answerOptionsToggleExpression 0..*
+* item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs named minOccurs 0..1
+* item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs named maxOccurs 0..1
 * item.extension contains SliderStart named start 0..1
 * item.extension contains SliderStop named stop 0..1
 * item.extension contains SliderStartLabel named startLabel 0..1
