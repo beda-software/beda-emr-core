@@ -1,5 +1,5 @@
 Profile: FHIREMRQuestionnaire
-Id: fhir-emr-questionnaire
+Id: software-beda-emr-questionnaire
 Title: "FHIR EMR Questionnaire"
 Parent: Questionnaire
 Description: "An example profile of the Questionnaire resource."
