@@ -1,8 +1,8 @@
-Profile: FHIREMRQuestionnaire
-Id: software-beda-emr-questionnaire
-Title: "FHIR EMR Questionnaire"
+Profile: BedaEMRQuestionnaire
+Id: fhir-emr-questionnaire
+Title: "Beda EMR Questionnaire"
 Parent: Questionnaire
-Description: "An example profile of the Questionnaire resource."
+Description: "Profile of the Questionnaire resource that contains SDC extensions along with Beda EMR custom extensions"
 
 * extension contains QuestionnaireMapper named mapping 0..*
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom named assembledFrom 0..1
