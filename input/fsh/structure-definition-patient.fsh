@@ -1,6 +1,6 @@
-Profile: BEDAEMRPatient
+Profile: BedaEMRPatient
 Id: beda-emr-patient
-Title: "BEDA EMR Patient"
+Title: "Beda EMR Patient"
 Parent: Patient
 Description: "Example of the change of default elements"
 
