@@ -33,3 +33,6 @@ zen-package.edn should be updated with new url:
         hl7-fhir-r4-core "https://github.com/zen-fhir/hl7-fhir-r4-core.git"
         hl7-terminology-r4 "git@github.com:zen-fhir/hl7-terminology-r4.git"}}
 ```
+
+And profile url has new url https://emr-core.beda.software/StructureDefinition/fhir-emr-questionnaire instead of https://beda.software/beda-emr-questionnaire
+
