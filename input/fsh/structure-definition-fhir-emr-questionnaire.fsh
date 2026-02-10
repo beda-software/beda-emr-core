@@ -43,3 +43,4 @@ Description: "Profile of the Questionnaire resource that contains SDC extensions
 * item.extension contains Macro named macro 0..1
 * item.extension contains InlineChoiceDirection named inlineChoiceDirection 0..1
 * item.extension contains RowsNumber named rowsNumber 0..1
+* item.extension contains EnableChart named enableChart 0..1
