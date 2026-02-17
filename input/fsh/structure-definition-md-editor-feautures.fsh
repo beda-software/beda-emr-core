@@ -10,7 +10,4 @@ Extension: MDEditorFeatures
 Id: mdEditorFeatures
 Title: "Markdown Editor Features"
 Description: "Markdown editor features extension"
-* extension contains mdEditorFeature 0..*
-* extension[mdEditorFeature].value[x] only code
-* extension[mdEditorFeature].valueCode from MDEditorFeaturesVS (required)
-* extension[mdEditorFeature] ^short = "Markdown editor feature"
+* valueCode from MDEditorFeaturesVS (required)
