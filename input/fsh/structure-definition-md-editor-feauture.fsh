@@ -6,8 +6,8 @@ ValueSet: MDEditorFeaturesVS
 Title: "Markdown Editor Features Value Set"
 * codes from system MDEditorFeaturesCS
 
-Extension: MDEditorFeatures
-Id: mdEditorFeatures
-Title: "Markdown Editor Features"
-Description: "Markdown editor features extension"
+Extension: MDEditorFeature
+Id: mdEditorFeature
+Title: "Markdown Editor Feature"
+Description: "Markdown editor feature extension"
 * valueCode from MDEditorFeaturesVS (required)
