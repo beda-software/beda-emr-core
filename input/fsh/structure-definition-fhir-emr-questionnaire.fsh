@@ -48,3 +48,5 @@ Description: "Profile of the Questionnaire resource that contains SDC extensions
 * item.extension contains EnableSort named enableSort 0..1
 * item.extension contains EnableFiltering named enableFiltering 0..1
 * item.extension contains MDEditorFeature named mdEditorFeature 0..*
+* item.extension contains ChartYAxisRange named chartYAxisRange 0..1
+* item.extension contains ChartHighlight named chartHighlight 0..*
