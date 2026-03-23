@@ -2,4 +2,5 @@ Extension: ColumnWidth
 Id: columnWidth
 Title: "Column Width"
 Description: "Column width extension"
-* valueInteger 1..1
+* valueQuantity 1..1
+* ^url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-width"
