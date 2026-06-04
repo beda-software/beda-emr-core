@@ -1,0 +1,13 @@
+hapi:
+  fhir:
+    fhir_version: R4
+    validate_resource_status_for_package_upload: false
+    validation:
+      enabled: true
+      requests_enabled: false
+    implementationguides:
+      beda_emr:
+        name: software.beda.emr
+        version: 3.0.0
+        installMode: STORE_AND_INSTALL
+        packageUrl: file:///app/software.beda.emr.tgz
