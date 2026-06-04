@@ -1,0 +1,13 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "test-mapper-invalid-reference",
+  "status": "draft",
+  "extension": [{
+    "url": "https://emr-core.beda.software/StructureDefinition/questionnaire-mapper",
+    "valueExpression": {
+      "language": "fpml",
+      "expression": "some-mapping",
+      "reference": "http://example.org/should-not-be-here"
+    }
+  }]
+}

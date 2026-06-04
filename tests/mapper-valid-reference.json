@@ -1,0 +1,11 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "test-mapper-valid-reference",
+  "status": "draft",
+  "extension": [{
+    "url": "https://emr-core.beda.software/StructureDefinition/questionnaire-mapper",
+    "valueReference": {
+      "reference": "Mapping/my-mapping-resource"
+    }
+  }]
+}
