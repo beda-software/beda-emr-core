@@ -5,6 +5,7 @@ Parent: Questionnaire
 Description: "Profile of the Questionnaire resource that contains SDC extensions along with Beda EMR custom extensions"
 
 * extension contains QuestionnaireMapper named mapping 0..*
+* extension contains QuestionnaireMapperBody named mappingBody 0..*
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom named assembledFrom 0..1
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceQueries named sourceQueries 0..*
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext named launchContext 0..*
