@@ -1,0 +1,32 @@
+services:
+  hapi-fhir:
+    image: hapiproject/hapi:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./tests/hapi-application.yaml:/app/config/application.yaml:ro
+      - ./output/package.tgz:/app/software.beda.emr.tgz:ro
+
+  hapi-fhir-ready:
+    image: curlimages/curl
+    depends_on:
+      - hapi-fhir
+    restart: on-failure
+    command:
+      - sh
+      - -c
+      - "until curl -sf http://hapi-fhir:8080/actuator/health; do echo 'Waiting for HAPI...'; sleep 10; done"
+
+  validate:
+    image: curlimages/curl
+    depends_on:
+      hapi-fhir-ready:
+        condition: service_completed_successfully
+    volumes:
+      - ./tests:/tests:ro
+    environment:
+      FHIR_BASE: "http://hapi-fhir:8080/fhir"
+      PROFILE: "https://emr-core.beda.software/StructureDefinition/fhir-emr-questionnaire"
+    entrypoint:
+      - sh
+      - /tests/validate_api.sh

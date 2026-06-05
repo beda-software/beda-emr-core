@@ -1,0 +1,12 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "test-mapper-valid-expression",
+  "status": "draft",
+  "extension": [{
+    "url": "https://emr-core.beda.software/StructureDefinition/questionnaire-mapper",
+    "valueExpression": {
+      "language": "fpml",
+      "expression": "some-mapping"
+    }
+  }]
+}

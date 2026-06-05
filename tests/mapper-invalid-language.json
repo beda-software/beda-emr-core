@@ -1,0 +1,12 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "test-mapper-invalid-language",
+  "status": "draft",
+  "extension": [{
+    "url": "https://emr-core.beda.software/StructureDefinition/questionnaire-mapper",
+    "valueExpression": {
+      "language": "text/fhirpath",
+      "expression": "some-mapping"
+    }
+  }]
+}
