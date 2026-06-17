@@ -11,8 +11,11 @@ Description: "Profile of the Questionnaire resource that contains SDC extensions
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext named assembleContext 0..* MS
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext named itemPopulationContext 0..1
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap named targetStructureMap 0..*
-* extension contains PrintableHeader named printableHeader 0..1
-* extension contains PrintableFooter named printableFooter 0..1
+* extension contains PrintableCover named printableCover 0..*
+* extension contains PrintableHeader named printableHeader 0..*
+* extension contains PrintableHeaderFirstPage named printableHeaderFirstPage 0..*
+* extension contains PrintableFooter named printableFooter 0..*
+* extension contains PrintableFooterLastPage named printableFooterLastPage 0..*
 
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-constraint named itemConstraint 0..*
 * item.extension contains http://hl7.org/fhir/StructureDefinition/variable named variable 0..*
