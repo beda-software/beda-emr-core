@@ -1,5 +1,5 @@
 Extension: PrintableFooter
 Id: printable-footer
 Title: "Printable Footer"
-Description: "Link to printable footer image source"
-* valueAttachment 1..1
+Description: "Footer shown on all pages — either an image attachment or a FHIRPath expression rendered as markdown"
+* value[x] only Attachment or Expression or string
