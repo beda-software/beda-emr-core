@@ -5,3 +5,6 @@ input-cache/
 output/
 temp/
 template/
+.gem/
+
+!mise.toml
