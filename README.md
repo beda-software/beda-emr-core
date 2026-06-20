@@ -1,25 +1,41 @@
 # FHIR EMR Implementation Guide
 
 
-## Local build
+## Development environment setup
 
-### Download ig-publisher
+This project uses [mise](https://mise.jdx.dev) to manage all required tools (Ruby, Java, Node, SUSHI, Python).
 
-``` bash
-curl -O https://github.com/HL7/fhir-ig-publisher/releases/download/1.8.12/publisher.jar 
+### Prerequisites
+
+Install mise if you don't have it:
+
+```bash
+curl https://mise.run | sh
 ```
 
-### Build static
+### First-time setup
 
-``` bash
-java -jar publisher.jar -ig ig/
+```bash
+# Trust the project's mise.toml (required once per clone)
+mise trust
+
+# Install all tools (Ruby 3.4.9, Java 17, Node 22, fsh-sushi, Python 3)
+mise install
+
+# Install Jekyll and Ruby gem dependencies
+mise run setup
+
+# Download IG Publisher (~100 MB) and build scripts
+mise run update-publisher
 ```
 
-### Open index.html
+### Build
 
-``` bash
-open ig/output/index.html
+```bash
+mise run build
 ```
+
+The built IG is in `output/`. Open `output/index.html` to view it.
 
 ## Validation / Testing
 
