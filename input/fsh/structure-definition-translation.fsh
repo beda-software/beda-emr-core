@@ -12,10 +12,6 @@ Description: "Language translation from base language of resource to another lan
 * extension[lang].url only uri
 * extension[lang].value[x] 1..
 * extension[lang].value[x] only code
-* extension[lang].value[x] from AllLanguages (required)
-* extension[lang].value[x] ^binding.description = "IETF language tag for a human language"
-* extension[lang].value[x] ^binding.additional.purpose = "starter"
-* extension[lang].value[x] ^binding.additional.valueSet = "http://hl7.org/fhir/ValueSet/languages"
 * extension[content] only Extension
 * extension[content] ^short = "Content in other Language"
 * extension[content] ^definition = "Content in other Language."
