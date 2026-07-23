@@ -1,0 +1,44 @@
+[tools]
+ruby            = "3.4.9"
+java            = "temurin-17"   # IG Publisher and validator_cli require Java 17+
+node            = "22"
+"npm:fsh-sushi" = "latest"       # IG Publisher calls sushi as an external process
+python          = "3"            # pack_fhir_resources.py (stdlib only)
+
+[env]
+# Keep gems project-local, mirroring the existing .gem/ directory
+BUNDLE_PATH = "{{config_root}}/.gem"
+BUNDLE_BIN  = "{{config_root}}/.gem/bin"
+_.path      = ["{{config_root}}/.gem/bin"]
+
+[tasks.setup]
+description = "Install Jekyll and Ruby gem dependencies"
+run         = "bundle install"
+
+[tasks.build]
+description = "Build the FHIR Implementation Guide (downloads publisher.jar on first run)"
+run         = "./_build.sh build"
+
+[tasks.build-notx]
+description = "Build the IG without the terminology server"
+run         = "./_build.sh notx"
+
+[tasks.update-publisher]
+description = "Download publisher.jar and IG Publisher scripts (run this first)"
+run         = "./_updatePublisher.sh -y"
+
+[tasks.jekyll]
+description = "Run the Jekyll build step only (requires a prior full build)"
+run         = "./_build.sh jekyll"
+
+[tasks.pack]
+description = "Pack fsh-generated resources into a FHIR transaction bundle"
+run         = "python pack_fhir_resources.py"
+
+[tasks.test]
+description = "Run FHIR validator tests (requires validator_cli.jar and a prior build)"
+run         = "./tests/validate.sh"
+
+[tasks.download-validator]
+description = "Download the HAPI FHIR validator CLI jar"
+run         = "./tests/download_validator.sh"
