@@ -51,3 +51,4 @@ Description: "Profile of the Questionnaire resource that contains SDC extensions
 * item.extension contains ChartYAxisRange named chartYAxisRange 0..1
 * item.extension contains ChartHighlight named chartHighlight 0..*
 * item.extension contains ColumnWidth named columnWidth 0..1
+* item.extension contains BackgroundImage named backgroundImage 0..1
